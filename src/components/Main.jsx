@@ -1,6 +1,11 @@
+//import components
 import ButtonList from './ButtonList';
 import Card from './Card';
 
+//import datas
+import languages from '../data/languages';
+
+//export component Main
 export default function Main() {
 
   //logic here
@@ -10,7 +15,7 @@ export default function Main() {
 
     <div className="container">
       <ButtonList></ButtonList>
-      <Card></Card>
+      <Card props={languages}></Card>
     </div>
   );
 }
