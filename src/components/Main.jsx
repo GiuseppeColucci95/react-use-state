@@ -18,7 +18,7 @@ export default function Main() {
   return (
 
     <div className="container">
-      <ButtonList active={activeIndex} setActive={setActiveIndex}></ButtonList>
+      <ButtonList active={activeIndex} setActive={setActiveIndex} array={languages}></ButtonList>
       <Card active={activeIndex} array={languages}></Card>
     </div>
   );
