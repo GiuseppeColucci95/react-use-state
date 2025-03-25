@@ -12,7 +12,7 @@ import languages from '../data/languages';
 export default function Main() {
 
   //logic here
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   //return here
   return (

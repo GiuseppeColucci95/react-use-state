@@ -1,9 +1,8 @@
+import Button from './Button';
+
 export default function ButtonsList({ active, setActive, array }) {
 
   //logic here
-  function HandleClick(idToActivate) {
-    setActive(idToActivate);
-  }
 
   //return here
   return (
@@ -12,9 +11,7 @@ export default function ButtonsList({ active, setActive, array }) {
 
         {
           array.map(element =>
-            <button key={`button-${element.id}`} className={`btn ${active === element.id ? "btn-warning" : "btn-primary"}`} onClick={() => {
-              HandleClick(element.id);
-            }}>{element.name}</button>
+            <Button key={`button-${element.id}`} active={active} setActive={setActive} element={element}></Button>
           )
         }
 
