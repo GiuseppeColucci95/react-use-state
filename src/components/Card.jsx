@@ -1,4 +1,4 @@
-export default function Card({ props }) {
+export default function Card({ active, array }) {
 
   //logic here
 
@@ -6,8 +6,8 @@ export default function Card({ props }) {
   return (
     <>
       <div className="card p-3">
-        <h2>{props[0].name}</h2>
-        <p>{props[0].description}</p>
+        <h2>{array[active - 1].name}</h2>
+        <p>{array[active - 1].description}</p>
       </div>
     </>
   );

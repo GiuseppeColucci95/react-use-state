@@ -1,3 +1,6 @@
+//import react useState
+import { useState } from 'react';
+
 //import components
 import ButtonList from './ButtonList';
 import Card from './Card';
@@ -9,13 +12,14 @@ import languages from '../data/languages';
 export default function Main() {
 
   //logic here
+  const [activeIndex, setActiveIndex] = useState(1);
 
   //return here
   return (
 
     <div className="container">
-      <ButtonList></ButtonList>
-      <Card props={languages}></Card>
+      <ButtonList active={activeIndex} setActive={setActiveIndex}></ButtonList>
+      <Card active={activeIndex} array={languages}></Card>
     </div>
   );
 }

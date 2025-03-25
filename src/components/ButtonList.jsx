@@ -1,4 +1,4 @@
-export default function ButtonsList() {
+export default function ButtonsList({ active, setActive }) {
 
   //logic here
 
@@ -6,14 +6,12 @@ export default function ButtonsList() {
   return (
     <>
       <div className="d-flex my-5 gap-3">
-        <button className="btn btn-primary" onClick={() => {
-          console.log("Ci ho cliccato!");
-        }}>HTML</button>
-        <button className="btn btn-primary">CSS</button>
-        <button className="btn btn-primary">Javascript</button>
-        <button className="btn btn-primary">Node.js</button>
-        <button className="btn btn-primary">Express</button>
-        <button className="btn btn-primary">ReactsJS</button>
+        <button className="btn btn-primary" onClick={() => { setActive(1) }}>HTML</button>
+        <button className="btn btn-primary" onClick={() => { setActive(2) }}>CSS</button>
+        <button className="btn btn-primary" onClick={() => { setActive(3) }}>Javascript</button>
+        <button className="btn btn-primary" onClick={() => { setActive(4) }}>Node.js</button>
+        <button className="btn btn-primary" onClick={() => { setActive(5) }}>Express</button>
+        <button className="btn btn-primary" onClick={() => { setActive(6) }}>ReactsJS</button>
       </div>
     </>
   );
